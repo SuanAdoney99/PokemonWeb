@@ -1,0 +1,330 @@
+/* ===================================
+   Estilos generales - Centrados
+==================================== */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Asegura que el contenido ocupe todo el alto de la página */
+  margin: 0;
+  flex-direction: column;
+}
+
+.container {
+  max-width: 1200px; /* Puedes ajustar el ancho máximo según prefieras */
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  max-width: 100%; /* Asegura que las tarjetas no se estiren demasiado */
+}
+
+/* ===================================
+   Navbar - Fija en la parte superior
+==================================== */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Asegura que la navbar esté por encima de otros elementos */
+}
+
+.navbar .navbar-brand {
+  font-weight: bold;
+}
+
+.navbar .nav-link {
+  font-size: 16px;
+}
+
+body {
+  padding-top: 60px; /* Para evitar que el contenido quede cubierto por la navbar */
+}
+
+
+
+/* ===================================
+   API Page
+==================================== */
+.api h2{
+  text-align: center;
+}
+.api-card img {
+  max-width: 100%;
+  height: auto;
+}
+
+.api-card p {
+  font-size: 14px;
+}
+
+/* ===================================
+   Componentes - Ajustes visuales
+==================================== */
+.components-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center; /* Centra los componentes horizontalmente */
+}
+
+.card {
+  width: 250px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: height 0.3s ease, padding 0.3s ease; /* Suaviza la transición de la altura y el padding */
+}
+
+.card-header {
+  background-color: #f1f1f1;
+  padding: 10px;
+}
+
+.card-body {
+  padding: 15px;
+  height: auto;
+  overflow: hidden; /* Evita el desbordamiento del contenido cuando está oculto */
+  transition: height 0.3s ease, padding 0.3s ease; /* Añade una transición suave */
+}
+
+/* Cuando el contenido está oculto */
+.card-body.hidden {
+  height: auto;
+  padding: 0;
+  display: none;
+}
+
+/* Cuando el contenido está visible */
+.card-body.visible {
+  display: block;
+  height: auto;
+  padding: 15px;
+}
+
+/* ===================================
+   Login Page
+==================================== */
+.login-container {
+  max-width: 400px;
+  margin: auto;
+  
+}
+
+.login-container form {
+  padding: 20px;
+}
+
+.login-container .form-label {
+  font-weight: bold;
+}
+
+.login-container .btn {
+  width: 100%;
+}
+
+/* ===================================
+   Profile Page
+==================================== */
+.profile-container {
+  padding: 20px;
+}
+
+.profile-container h2 {
+  color: #333;
+}
+
+/* ===================================
+   UseReducer Page (Task Manager)
+==================================== */
+.task-manager-container {
+  margin-top: 20px;
+}
+
+.task-manager-container ul {
+  padding-left: 0;
+}
+
+.task-manager-container .list-group-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task-manager-container .list-group-item-success {
+  background-color: #d4edda;
+}
+
+.task-manager-container .btn {
+  margin-left: 10px;
+}
+
+/* ===================================
+   SearchBar
+==================================== */
+.search-bar-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Contenedor de resultados de búsqueda */
+.search-results {
+  z-index: 1050; /* Mantener encima de otros elementos */
+  max-height: 300px; /* Limitar el alto máximo */
+  overflow-y: auto; /* Habilitar scroll si hay demasiados resultados */
+  border: 1px solid #ddd; /* Añadir borde para separarlo visualmente */
+}
+
+/* Imagen en los resultados */
+.search-results img {
+  border-radius: 5px;
+  object-fit: contain;
+}
+
+
+/* ===================================
+   ChatBot
+==================================== */
+
+
+/* ===================================
+   Informes
+==================================== */
+.informes-container {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.informes-container h2 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.informes-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.input-group label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: black;
+}
+
+.input-group select {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.filter-btn {
+  background-color: #007bff;
+  color: white;
+}
+
+.filter-btn:hover {
+  background-color: #0056b3;
+}
+
+.print-btn {
+  background-color: #28a745;
+  color: white;
+}
+
+.print-btn:hover {
+  background-color: #1e7e34;
+}
+
+.error-message {
+  color: red;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+.filtered-results {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.filtered-results h3 {
+  color: #333;
+}
+
+.filtered-results ul {
+  list-style: none;
+  padding: 0;
+}
+
+.filtered-results li {
+  background-color: grey;
+  color: white;
+  padding: 8px;
+  margin: 5px 0;
+  border-radius: 5px;
+}
+
+/* ===================================
+   Sección de Gráficos
+==================================== */
+.charts-section {
+  display: flex;
+  flex-wrap: wrap;       /* Permite que los gráficos se reacomoden en pantallas pequeñas */
+  justify-content: center;
+  gap: 30px;            /* Espacio entre los contenedores de gráficos */
+  margin-top: 40px;
+}
+
+.chart-container {
+  flex: 1 1 400px;      /* El contenedor se expande hasta ocupar mínimo 400px */
+  max-width: 500px;     /* Ajusta el ancho máximo del contenedor del gráfico */
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+}
+
+/* Título dentro de cada contenedor de gráfico */
+.chart-container h4 {
+  margin-bottom: 15px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Ajusta el tamaño de los gráficos */
+.chart-container canvas {
+  max-width: 100%;
+  height: auto;         /* Mantiene proporción en pantallas pequeñas */
+}
+
